@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Am I?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="desk-scene">
+
+  <img src="images/phone.PNG" class="desk-item phone" id="phone">
+  <img src="images/sketchbook.PNG" class="desk-item sketchbook" id="sketchbook">
+  <img src="images/receipt.png" class="desk-item receipt" id="receipt">
+  <img src="images/grocery.PNG" class="desk-item grocery" id="grocery">
+  <img src="images/flashdrive.png" class="desk-item usb" id="usb">
+
+  <img src="images/coffee.png" class="decor-item coffee">
+  <img src="images/pen.png" class="decor-item pen">
+  <img src="images/bar.png" class="decor-item bar">
+   </div>
+
+
+
+   <div id="sketchbook-overlay" class="overlay hidden">
+  <div class="sketchbook-popup">
+     <img src="images/close-x.png" id="close-sketchbook" class="close-button">
+    <img src="images/sketchbook-2.PNG" class="open-sketchbook">
+  </div>
+</div>
+
+   <div id="receipt-overlay" class="overlay hidden">
+  <div class="receipt-popup">
+    <img src="images/close-x.png" id="close-receipt" class="close-button">
+    <img src="images/receipt-2.png" class="open-receipt">
+  </div>
+</div>
+
+<div id="grocery-overlay" class="overlay hidden">
+  <div class="grocery-popup">
+    <img src="images/close-x.png" id="close-grocery" class="close-button">
+    <img src="images/grocery-2.PNG" class="open-grocery">
+  </div>
+</div>
+
+
+<div id="usb-overlay" class="overlay hidden">
+  <div class="usb-popup">
+    <img src="images/close-x.png" id="close-usb" class="close-button">
+   
+    <img src="images/left.png" id="prev-photo" class="gallery-arrow prev-arrow">
+
+    <img id="usb-photo" src="images/photo1.JPG" alt="USB photo collection">
+      <img src="images/right-arrow.png" id="next-photo" class="gallery-arrow next-arrow">
+
+  </div>
+</div>
+
+
+ <div id="phone-overlay" class="overlay hidden">
+  <div class="phone-popup">
+    <img src="images/close-x.png" id="close-phone" class="close-button">
+
+    <img src="images/music.png" class="open-phone">
+
+    <img src="images/play.png" class="phone-control play" id="play">
+    <img src="images/pause.png" class="phone-control pause hidden" id="pause">
+  </div>
+</div>
+
+
+
+<audio id="phone-audio">
+  <source src="audio/music1.mp4" type="audio/mp4">
+</audio>
+
+
+<script src="script.js"></script>
+</body>
+</html>

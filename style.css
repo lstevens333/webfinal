@@ -1,0 +1,408 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+.hidden {
+  display: none;
+}
+
+#splash-screen {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  /* background-image: url("images/table.jpg"); */
+  color: #ffffff;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.loading-bar {
+  width: 300px;
+  height: 18px;
+  border: 1px solid #ffffff;
+}
+
+.loading-fill {
+  height: 100%;
+  width: 0%;
+  background: #e6e6e6;
+  animation: load 3s forwards;
+}
+
+@keyframes load {
+  to {
+    width: 100%;
+  }
+}
+
+
+
+.desk-scene {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/table.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.desk-item {
+  position: absolute;
+  cursor: pointer;
+
+}
+
+.desk-item:hover {
+
+  filter: drop-shadow(0 0 18px rgba(255,255,255,0.5));
+}
+
+
+
+.phone {
+  width: 600px;
+
+  top: 25%;
+  left: 65%;
+
+     transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.phone:hover {
+
+  transform:
+    rotate(-2deg)
+    scale(1.03);
+}
+
+.sketchbook {
+  position: absolute;
+
+  width: 700px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -45%) rotate(-4deg);
+
+   transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.sketchbook:hover {
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-4deg)
+    scale(1.03);
+}
+
+.receipt {
+  width: 260px;
+
+  top: 33%;
+  left: 10%;
+
+  transform: rotate(12deg);
+
+     transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.receipt:hover {
+
+  transform:
+    rotate(-4deg)
+    scale(1.03);
+}
+
+.grocery {
+  width: 225px;
+
+  top: 5%;
+  left: 75%;
+
+     transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.grocery:hover {
+
+  transform:
+    scale(1.03);
+}
+
+.usb {
+  width: 130px;
+
+  top: 73%;
+  left: 26%;
+
+     transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.usb:hover {
+
+  transform:
+    rotate(-4deg)
+    scale(1.03);
+}
+
+
+
+
+/* sketchbook styling */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.open-sketchbook {
+  width: 120vw;
+  max-width: 900px;
+
+  transform: scale(1.75);
+}
+
+
+
+/* receipt styling */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.open-receipt {
+  width: 80vw;
+  max-width: 900px;
+  transform: translateY(130px);
+}
+
+
+
+/* grocery styling */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.open-grocery {
+  width: 80vw;
+  max-width: 900px;
+}
+
+
+
+/* flashdrive styling */
+
+.usb-popup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#usb-photo {
+  width: 60vw;
+  max-width: 700px;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.gallery-arrow {
+  position: absolute;
+
+  width: 180px;
+
+  cursor: pointer;
+
+  z-index: 30;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.prev-arrow {
+  left: -160px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.prev-arrow:hover {
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+.next-arrow {
+  right: -160px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.next-arrow:hover {
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+
+
+/* phone styling */
+
+.open-phone {
+  width: 680px;
+}
+
+.phone-popup {
+  position: relative;
+}
+
+.phone-control {
+  position: absolute;
+  width: 680px;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  cursor: pointer;
+  z-index: 20;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.phone-control:hover {
+  filter: drop-shadow(0 0 18px rgba(255,255,255,0.3));
+  transform: translate(-50%, -45%) scale(1.03);
+}
+
+
+
+.decor-item {
+    position: absolute;
+    pointer-events: none;
+}
+
+.coffee {
+  width: 180px;
+
+  top: 10%;
+  left: 15%;
+
+  transform: rotate(12deg) scale(1.9);
+}
+
+.pen {
+  width: 120px;
+
+  top: 40%;
+  left: 65%;
+
+  transform: rotate(12deg) scale(1.9);
+}
+
+.bar {
+  width: 120px;
+
+  top: 70%;
+  left: 10%;
+
+  transform: rotate(-14deg) scale(2.5);
+}
+
+
+.close-button {
+  position: fixed;
+
+  top: 40px;
+  right: 20px;
+
+  width: 300px;
+
+  cursor: pointer;
+
+  z-index: 30;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.close-button:hover {
+
+  transform: scale(1.08);
+
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+
+}
+
+
